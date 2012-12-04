@@ -1,0 +1,53 @@
+<head>
+<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<style>
+#main {
+  width: 960px;
+  height: 600px;
+  background-image: url('/img/business_people.svg');
+  background-size: cover;
+  background-position: 0% 50%;
+  margin: auto;
+}
+#text {
+  background-color: rgba(256,256,256,0.9);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#text > h1 {
+ font-family: 'Arvo', serif;
+}
+
+#text > form {
+  width: 200px;
+  margin: auto;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+  <div id="main">
+    <div id="text">
+      <h1>Beeyunks Presents</h1>
+      <p>HTML5 multiplayer games, with the help of <a href="//www.jibemobile.com">Jibe Mobile</a></p>
+      <p>Want to know more? Send us a message:</p>
+      <div id='emailAlert' class='alert alert-success' style='display:none'><b>Email sent</b>. Thanks! We'll get back to you shortly.</div>
+      <script>window.location.hash.match(/email_received/) && (document.getElementById('emailAlert').style.display = 'inline-block');</script>
+      <form action='/sendmessage' method='post'>
+        <fieldset>
+          <input type="text" name="name" placeholder="Name"/>
+          <input type="text" name="email" placeholder="Email"/>
+          <label>Message</label>
+          <textarea name="message" rows="3"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </fieldset>
+      </form>
+      <br>
+      <a href='/downloads/html5withjibe.apk'>Try out our Android app!</a>
+    </div>
+  </div>
+</body>
